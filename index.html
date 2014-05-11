@@ -9,7 +9,11 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+}); layout: post
+title: &ldquo;算法导论&mdash;第二章习题&rdquo;
+date: 2014-05-11 18:04 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +70,120 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/11/di-%5B%3F%5D-pian-wen-zhang/">Di [?] Pian Wen Zhang</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-11T00:00:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+
+<hr />
+
+<p>layout: post
+title: &ldquo;算法导论&mdash;第二章习题&rdquo;
+date: 2014-05-11 18:04:00 +0800
+comments: true</p>
+
+<h2>categories: </h2>
+
+<p><strong>2.1-2 重写过程INSERTION-SORT,使之按非升序（而不是按非降序）排序。</strong></p>
+
+<p>对数组A进行非升序排序：</p>
+
+<pre><code>void InsertionSort(int[] Unsorted, int size)
+{
+    for(j = 2; j &lt; size; j++ )
+    {
+        int key = Unsorted[j];
+        int i = j -1;
+
+        while(i &gt; 0 &amp;&amp; Unsored[i] &lt; key)
+        {
+            Unsorted[i+1] = Unsotred[i];
+            i = i-1;
+        }
+
+        Unsorted[i+1] = key;
+
+    }
+}
+</code></pre>
+
+<p><strong>2.2-1 用$\theta$形式表示对函数$n<sup>3</sup>/1000-100n<sup>2</sup>-100n+3$.</strong></p>
+
+<p>答：$\theta(3)$</p>
+
+<p><strong>2.2-2写出选择排序的代码，以及它的最佳和最坏情况下的运行时间</strong></p>
+
+<p>答:最佳时间$\theta(n)$. 最坏时间$\theta(n<sup>2</sup>)$.</p>
+
+<p>选择排序代码：</p>
+
+<pre><code>void SelectionSort(int[] Unsorted, int size)
+{
+    for(int i =0; i &lt; size; i++)
+    {
+        int min = Unsorted[i];
+        int minIndex = i;
+        //找到最小数
+        for(int j=i; j&lt;size; j++)
+        {
+            if(Unsorted[j]&lt;min)
+            {
+                min = Unsorted[j];
+                minIndex = j;   
+            }
+        }       
+
+        if(min_index!=i)
+        {
+            //交换最小的数和第n个数
+            int temp = Unsorted[i];
+            Unsorted[i] = Unsorted[minIndex];
+             Unsorted[minIndex] = temp;
+        }
+
+    }
+
+}
+</code></pre>
+
+<p><strong>2.3-1以图2-4为模型，说明合并排序在输入数组A={3,41,52,26,38,57,9,49}上的执行过程.</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -77,6 +195,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/di-%5B%3F%5D-pian-wen-zhang/">Di [?] Pian Wen Zhang</a>
+      </li>
     
   </ul>
 </section>
